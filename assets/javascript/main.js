@@ -49,7 +49,7 @@ var game = {
         {
             $("#game").empty();
             game.clockTime = 10;
-            $("#game").append($("<h4>",{"text" : "Time Left : ", "class" : "center", "id" : "remainingTime"}));
+            $("#game").append($("<h4>",{"text" : "Time Left : ", "class" : "text-center", "id" : "remainingTime"}));
             $("#remainingTime").text("Time Left : " + game.clockTime);
             if(!game.clockRunning)
             {
@@ -57,22 +57,23 @@ var game = {
             }
             var questionList = Object.values(game.questions)[game.currentQ];
             $("#game").append($("<div>",{"id" : "qna", "class" : "row"}));
-            $("#qna").append($("<h2>",{"text" : questionList, "id" : "Question", "class" : "col s12 center"}));
-            $("#qna").append($("<h2>",{"id" : "result", "class" : "col s12 center"}));
+            $("#qna").append($("<h2>",{"text" : questionList, "id" : "Question", "class" : "text-center mx-auto"}));
+            $("#Question").append($("<h2>",{"id" : "result", "class" : "col text-center"}));
+            $("#result").append($("<div>",{"id" : "answers", "class" : "row"}));
             var questionAnswers = Object.values(game.answers)[game.currentQ];
             questionAnswers.forEach(function(index, key){
-                $("#qna").append($("<h4>", {"text" : index, "id" : key, "class" : "col s3 center option"}));
+                $("#answers").append($("<h4>", {"text" : index, "id" : key, "class" : "col text-center option card"}));
             });
         }
         else if(game.currentQ === Object.keys(game.questions).length)
         {
             clearInterval(game.clock);
             $("#game").empty();
-            $("#game").append($("<h2>",{"text" : "Results!", "id" : "results"}));
-            $("#results").append($("<h4>",{"text" : "Correct : " + game.right}));
-            $("#results").append($("<h4>",{"text" : "Wrong : " + game.wrong}));
-            $("#results").append($("<h4>",{"text" : "Unanswered : " + game.noAnswer}));
-            $("#results").append($("<button>",{"text" : "Play Again!","id" : "playAgain"}));
+            $("#game").append($("<h2>",{"text" : "Results!", "id" : "results", "class" : "mx-auto text-center"}));
+            $("#results").append($("<h4>",{"text" : "Correct : " + game.right, "class" : "mx-auto text-center"}));
+            $("#results").append($("<h4>",{"text" : "Wrong : " + game.wrong, "class" : "mx-auto text-center"}));
+            $("#results").append($("<h4>",{"text" : "Unanswered : " + game.noAnswer, "class" : "mx-auto text-center"}));
+            $("#results").append($("<button>",{"text" : "Play Again!","id" : "playAgain", "class" : "mx-auto text-center"}));
         }
     },
     checkUserGuess : function(){
