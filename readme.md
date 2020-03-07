@@ -38,14 +38,6 @@ npm install
 
 [Here is the link for the deployment of this app.](https://theresinger.github.io/Trivia/)
 
-## Application Use
-
-1. User selects how many words to type, and the topic.
-2. The API pulls a list of words and populates the words for the user to type to the dom.
-3. User types the words displayed as fast as possible.
-4. Display the users words per minute.
-5. User enters their name to be added to the leaderboard.
-
 ### Authors
 
-See the list of [contributors](https://github.com/TheResinger/TypingSpeedTest/graphs/contributors) who participated in this project along with individual commit history. 
+See the list of [contributors](https://github.com/TheResinger/Trivia/graphs/contributors) who participated in this project along with individual commit history. 
