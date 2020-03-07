@@ -18,7 +18,7 @@ $ git clone https://github.com/TheResinger/Trivia.git
 ```
 SSH:
 ```
-$ git clone git@github.com:TheResinger/Trivi.git
+$ git clone git@github.com:TheResinger/Trivia.git
 ```
 
 Next, cd into the repository and run the command
@@ -36,7 +36,7 @@ npm install
 
 ### Deployment
 
-[Here is the link for the deployment of this app.](https://theresinger.github.io/TypingSpeedTest/)
+[Here is the link for the deployment of this app.](https://theresinger.github.io/Trivia/)
 
 ## Application Use
 
